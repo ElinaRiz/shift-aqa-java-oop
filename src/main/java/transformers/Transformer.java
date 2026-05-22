@@ -1,6 +1,6 @@
 package transformers;
 
-public class Transformer {
+public abstract class Transformer {
     private String name;
 
     public Transformer(String name) {
@@ -11,15 +11,9 @@ public class Transformer {
         return name;
     }
 
-    public void run() {
-        System.out.println(name + " бежит");
-    }
+    public abstract void transform();
 
-    public void fire() {
-        System.out.println(name + " стреляет");
-    }
-
-    public void charge() {
-        System.out.println(name + " заряжается");
+    public void printInfo() {
+        System.out.println("Имя: " + name);
     }
 }
