@@ -1,5 +1,9 @@
 import transformers.Autobot;
 import transformers.Decepticon;
+import transformers.Transformer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,5 +20,14 @@ public class Main {
         decepticon.fire();
         decepticon.charge();
         decepticon.transform();
+
+        System.out.println();
+        List<Transformer> transformers = new ArrayList<>();
+        transformers.add(autobot);
+        transformers.add(decepticon);
+        for (Transformer transformer : transformers) {
+            transformer.printInfo();
+            System.out.println();
+        }
     }
 }
